@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+#field{
+    width:455px;
+    margin:auto;
+    display:flex;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    border:1px solid grey;
+    justify-content: center;
+}
+.cell{
+    margin:5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid gray;
+}
+#buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 455px;
+    margin: 20px auto;
+}
+button{
+    padding: 5px;
+}
+input{
+    font-size: 1.5rem;
+    text-align: center;
+}
