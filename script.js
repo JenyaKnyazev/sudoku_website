@@ -127,18 +127,24 @@ function change_field(count){
 }
 function hard(){
     do{
-        change_field(18);
+        change_field(9);
     }while(is_solvable()==false);
+    solution();
+    clear(81-18);
 }
 function medium(){
     do{
-        change_field(27);
+        change_field(9);
     }while(is_solvable()==false);
+    solution();
+    clear(81-27);
 }
 function easy(){
     do{
-        change_field(36);
+        change_field(9);
     }while(is_solvable()==false);
+    solution();
+    clear(81-36);
 }
 function sort(arr){
     for(let i=1;i<arr.length;i++)
@@ -179,4 +185,13 @@ function is_solvable(){
         arr.push(el);
     }
     return solve(arr,0,0);
+}
+function clear(count){
+    let arr=create_random_arr(count);
+    for(let i=0;i<arr.length;i++){
+        field[arr[i][0]][arr[i][1]]=0;
+        let cell=document.getElementById(arr[i][0]+" "+arr[i][1]);
+        cell.value="";
+        cell.disabled=false;
+    }
 }
